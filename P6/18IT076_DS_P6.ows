@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(150, 150)" />
+	</nodes>
+	<links />
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03s\x00\x00\x00\x8f\x00\x00\x06\xf0\x00\x00\x02\x94\x00\x00\x03t\x00\x00\x00\xb5\x00\x00\x06\xef\x00\x00\x02\x93\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03t\x00\x00\x00\xb5\x00\x00\x06\xef\x00\x00\x02\x93', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}, {'name': 'New script', 'script': 'import Orange\n\ntitanic = Orange.data.Table("titanic")\ncontinuizer = Orange.preprocess.Continuize()\n\ntitanic1 = continuizer(titanic)\nprint("Before Continuization : ",titanic.domain)\nprint("After Continuization : ",titanic1.domain)\n\n#Data of row 15 in the before and after continuization\nprint("15th row data before : ",titanic[15])\nprint("15th row data after : ",titanic1[15])', 'filename': None}], 'scriptText': '#python script for Randomize\nfrom Orange.data import Table\nfrom Orange.preprocess import Randomize\ndata = Table("iris")\nrandomizer = Randomize(Randomize.RandomizeClasses)\nrandomized_data = randomizer(data)\nprint("Before randomization : ",iris[2])\nprint("After Randomization : ",randomized_data[2])', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00q\x00\x00\x00q\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
